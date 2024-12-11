@@ -1,5 +1,7 @@
 from database_manager import init_db, save_tenders
 from scripts.scraper import scrape_tenders
+from scripts.generate_report import generate_pdf_report
+
 
 print("Initializing the database...")
 init_db()
@@ -13,3 +15,6 @@ if tenders:
     print("Tenders have been successfully saved to the database!")
 else:
     print("No tenders found to save.")
+
+
+generate_pdf_report()
